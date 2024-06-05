@@ -3,3 +3,6 @@ build/
 test/#TestHello_NewbornAirwayGeneration.hpp#
 test/.#TestHello_NewbornAirwayGeneration.hpp
 test/TestHello_NewbornAirwayGeneration.hpp~
+/test/TestAirwayGeneration.hpp~
+/test/TestNewbornAirwayGeneration.hpp
+/test/TestNewbornAirwayGeneration.hpp~
