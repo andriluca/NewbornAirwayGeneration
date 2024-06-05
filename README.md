@@ -1,9 +1,11 @@
-# A template user project for use with Chaste.
+# Generation of Newborn Airways' Anatomy
 
-You now simply click the big green "Use this template" button to use a copy of this repository as the basis of your own new repository under your github username/organisation (this 'template' status avoids complications with forks all being linked back to this repo).
+This repository contains a Chaste User Project used to generate the
+anatomical surrogate of newborn airways.
 
-Alternatively, if you aren't a github user, you can download a zip (see Releases button) and start your own repository with that.
+Be sure Chaste is correctly installed and that you have run
 
-Then see the [User Projects](https://chaste.github.io/docs/user-guides/user-projects/) guide page on the Chaste website for more information.
+```bash
+make -j4 lung
+```
 
-If you clone this repository, you should make sure to rename the template_project folder with your project name and run the 'setup_project.py' script to avoid conflicts if you have multiple projects.
