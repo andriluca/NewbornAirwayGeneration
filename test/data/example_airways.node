@@ -1,7 +1,7 @@
 # First row, first element is the number of nodes in this file.
 # First row, second element is the number of node coordinates.
 # First row, third element is the number of node attributes (i.e. one for `radius`, one for `start_id`).
-# First row, fourth element is the index of first node.
+# First row, fourth element is the boundary marker (let it be 0).
 #
 # Each other row contains:
 # First element: node index (starting from 0 up to N-1).
@@ -12,6 +12,7 @@
 # If a node is generative, the algorithm starts branching airways from there, otherwise it won't be considered.
 #
 12065	3	2	0
+# idx             x                      y                       z                      radius       start_id
 0	-5.6963300704956054688	-186.147003173828125	-38.14350128173828125	6.6915100000000000691	1
 1	-5.5852799415588378906	-185.7239990234375	-39.463298797607421875	6.7337499999999996803	0
 2	-5.5792999267578125	-185.662994384765625	-39.61090087890625	6.7381700000000002149	0
