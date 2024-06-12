@@ -81,7 +81,8 @@ public:
   {
     // Instantiate Mesh and its Reader.
     TetrahedralMesh<1,3> airways_mesh;
-    TrianglesMeshReader<1,3> airways_mesh_reader("projects/NewbornAirwayGeneration/test/data/example_airways");
+    // TrianglesMeshReader<1,3> airways_mesh_reader("projects/NewbornAirwayGeneration/test/data/example_airways");
+    TrianglesMeshReader<1,3> airways_mesh_reader("projects/NewbornAirwayGeneration/test/data/airways");
     airways_mesh.ConstructFromMeshReader(airways_mesh_reader);
 
     // Instantiate the complete airway generator.
@@ -99,27 +100,27 @@ public:
 
     // Set up physical limits.
     vtkSmartPointer<vtkSTLReader> lll_reader = vtkSmartPointer<vtkSTLReader>::New();
-    lll_reader->SetFileName("lung/test/data/lll.stl");
+    lll_reader->SetFileName("projects/NewbornAirwayGeneration/test/data/LLL.stl");
     lll_reader->Update();
     generator.AddLobe(lll_reader->GetOutput(), LEFT);
 
     vtkSmartPointer<vtkSTLReader> lul_reader = vtkSmartPointer<vtkSTLReader>::New();
-    lul_reader->SetFileName("lung/test/data/lul.stl");
+    lul_reader->SetFileName("projects/NewbornAirwayGeneration/test/data/LUL.stl");
     lul_reader->Update();
     generator.AddLobe(lul_reader->GetOutput(), LEFT);
 
     vtkSmartPointer<vtkSTLReader> rll_reader = vtkSmartPointer<vtkSTLReader>::New();
-    rll_reader->SetFileName("lung/test/data/rll.stl");
+    rll_reader->SetFileName("projects/NewbornAirwayGeneration/test/data/RLL.stl");
     rll_reader->Update();
     generator.AddLobe(rll_reader->GetOutput(), RIGHT);
 
-    vtkSmartPointer<vtkSTLReader> rml_reader = vtkSmartPointer<vtkSTLReader>::New();
-    rml_reader->SetFileName("lung/test/data/rml.stl");
-    rml_reader->Update();
-    generator.AddLobe(rml_reader->GetOutput(), RIGHT);
+    // vtkSmartPointer<vtkSTLReader> rml_reader = vtkSmartPointer<vtkSTLReader>::New();
+    // rml_reader->SetFileName("lung/test/data/rml.stl");
+    // rml_reader->Update();
+    // generator.AddLobe(rml_reader->GetOutput(), RIGHT);
 
     vtkSmartPointer<vtkSTLReader> rul_reader = vtkSmartPointer<vtkSTLReader>::New();
-    rul_reader->SetFileName("lung/test/data/rul.stl");
+    rul_reader->SetFileName("projects/NewbornAirwayGeneration/test/data/RUL.stl");
     rul_reader->Update();
     generator.AddLobe(rul_reader->GetOutput(), RIGHT);
 
